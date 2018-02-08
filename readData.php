@@ -16,34 +16,29 @@
 		<p>
 			<label for="">Documento:</label>
 			<input type="text" name="Documento" id="Documento">
+			<input type="button" value="Consulta" onclick="consultaDocumento()">
 		</p>
 		<div class="divTable">
 			<div class="divTableHeading">
-				<!-- <div class="divTableRow">
-					<div class="divTableCell">&nbsp;</div>
-					<div class="divTableCell">&nbsp;</div>
-					<div class="divTableCell">&nbsp;</div>
-					<div class="divTableCell">&nbsp;</div>
-					<div class="divTableCell">&nbsp;</div>
-					<div class="divTableCell">&nbsp;</div>
-					<div class="divTableCell">&nbsp;</div>
-					<div class="divTableCell">&nbsp;</div>
-					<div class="divTableCell">&nbsp;</div>
-					<div class="divTableCell">&nbsp;</div>
-					<div class="divTableCell">&nbsp;</div>
-				</div> -->
 				<div class="divTableRow">
-					<div class="divTableCell">IDENTIFICACION</div>
-					<div class="divTableCell">NOMBRE COMPLETO</div>
-					<div class="divTableCell">CENTRO</div>
-					<div class="divTableCell">ZONA</div>
-					<div class="divTableCell">PROGRAMA</div>
-					<div class="divTableCell">ESCUELA</div>
-					<div class="divTableCell">EMAIL</div>
-					<div class="divTableCell">TELEFONO</div>
-					<div class="divTableCell">EDAD</div>
-					<div class="divTableCell">ASIGNACION</div>
-					<div class="divTableCell">CONVENIO</div>
+					<div class="divTableHead">Titulo</div>
+				</div>
+			</div>
+		</div>
+		<div class="divTable">
+			<div class="divTableHeading">
+				<div class="divTableRow">
+					<div class="divTableHead">IDENTIFICACION</div>
+					<div class="divTableHead">NOMBRE COMPLETO</div>
+					<div class="divTableHead">CENTRO</div>
+					<div class="divTableHead">ZONA</div>
+					<div class="divTableHead">PROGRAMA</div>
+					<div class="divTableHead">ESCUELA</div>
+					<div class="divTableHead">EMAIL</div>
+					<div class="divTableHead">TELEFONO</div>
+					<div class="divTableHead">EDAD</div>
+					<div class="divTableHead">ASIGNACION</div>
+					<div class="divTableHead">CONVENIO</div>
 				</div>
 			</div>
 			<div class="divTableBody">
@@ -62,9 +57,169 @@
 				</div>
 			</div>
 		</div>
-		<p>
-			<input type="button" value="Consulta" onclick="consultaDocumento()">
-		</p>
+		<div class="divTable">
+			<div class="divTableHeading">
+				<div class="divTableRow">
+					<div class="divTableHead">Novedad</div>
+					<div class="divTableHead">Inducci&oacute;n
+						<div class="divTable innerTable">
+							<div class="divTableHeading">
+								<div class="divTableRow">
+									<div class="divTableHead">General</div>
+									<div class="divTableHead">Campus Virtual</div>
+								</div>
+							</div>							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="divTableBody">
+				<div class="divTableRow">
+					<div class="divTableCell">&nbsp;</div>
+					<div class="divTableCell">
+						<div class="divTable">
+							<div class="divTableBody">
+								<div class="divTableRow">
+									<div class="divTableCell">&nbsp;</div>
+									<div class="divTableCell">&nbsp;</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="divTable">
+			<div class="divTableHeading">
+				<div class="divTableRow">
+					<div class="divTableHead">Factores de Riesgo
+						<div class="divTable">
+							<div class="divTableHeading">
+								<div class="divTableRow">
+									<div class="divTableHead">Factor Socio-Demogr&aacute;fico
+										<div class="divTable">
+											<div class="divTableHeading">
+												<div class="divTableRow">
+													<div class="divTableHead">Riesgo</div>
+													<div class="divTableHead">Acciones realizadas según ruta de PAPC</div>
+													<div class="divTableHead">RESULTADOS</div>
+												</div>
+											</div>
+											<div class="divTableBody innerTableBody">
+												<div class="divTableRow">
+													<div class="divTableCell" id="riesgoFSD">&nbsp;</div>
+													<div class="divTableCell">&nbsp;</div>
+													<div class="divTableCell">&nbsp;</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="divTableHead">Factor Socio-Económico
+										<div class="divTable">
+											<div class="divTableHeading">
+												<div class="divTableRow">
+													<div class="divTableHead">Riesgo</div>
+													<div class="divTableHead">Acciones realizadas según ruta de PAPC</div>
+													<div class="divTableHead">RESULTADOS</div>
+												</div>
+											</div>
+											<div class="divTableBody innerTableBody">
+												<div class="divTableRow">
+													<div class="divTableCell">&nbsp;</div>
+													<div class="divTableCell">&nbsp;</div>
+													<div class="divTableCell">&nbsp;</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="divTableHead">Factor Academico Antecedentes
+										<div class="divTable">
+											<div class="divTableHeading">
+												<div class="divTableRow">
+													<div class="divTableHead">Riesgo</div>
+													<div class="divTableHead">Acciones realizadas según ruta de PAPC</div>
+													<div class="divTableHead">RESULTADOS</div>
+												</div>
+											</div>
+											<div class="divTableBody innerTableBody">
+												<div class="divTableRow">
+													<div class="divTableCell">&nbsp;</div>
+													<div class="divTableCell">&nbsp;</div>
+													<div class="divTableCell">&nbsp;</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="divTableHead">Factor Académico por Apropiacion al Modelo
+										<div class="divTable">
+											<div class="divTableHeading">
+												<div class="divTableRow">
+													<div class="divTableHead">Riesgo</div>
+													<div class="divTableHead">Acciones realizadas según ruta de PAPC</div>
+													<div class="divTableHead">RESULTADOS</div>
+												</div>
+											</div>
+											<div class="divTableBody innerTableBody">
+												<div class="divTableRow">
+													<div class="divTableCell">&nbsp;</div>
+													<div class="divTableCell">&nbsp;</div>
+													<div class="divTableCell">&nbsp;</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="divTableHead">Factor Institucional
+										<div class="divTable">
+											<div class="divTableHeading">
+												<div class="divTableRow">
+													<div class="divTableHead">Riesgo</div>
+													<div class="divTableHead">Acciones realizadas según ruta de PAPC</div>
+													<div class="divTableHead">RESULTADOS</div>
+												</div>
+											</div>
+											<div class="divTableBody innerTableBody">
+												<div class="divTableRow">
+													<div class="divTableCell">&nbsp;</div>
+													<div class="divTableCell">&nbsp;</div>
+													<div class="divTableCell">&nbsp;</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="divTableHead">Factores Externos
+										<div class="divTable">
+											<div class="divTableHeading">
+												<div class="divTableRow">
+													<div class="divTableHead">Riesgo</div>
+													<div class="divTableHead">Acciones realizadas según ruta de PAPC</div>
+													<div class="divTableHead">RESULTADOS</div>
+												</div>
+											</div>
+											<div class="divTableBody innerTableBody">
+												<div class="divTableRow">
+													<div class="divTableCell">&nbsp;</div>
+													<div class="divTableCell">&nbsp;</div>
+													<div class="divTableCell">&nbsp;</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="divTableHead">NIVEL DE RIESGO POR FACTORES
+										<div class="divTable">
+											<div class="divTableBody innerTableBody">
+												<div class="divTableRow">
+													<div class="divTableCell">&nbsp;</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</form>
 </body>
 </html>

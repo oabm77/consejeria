@@ -9,6 +9,12 @@
 	background-color: #EEE;
 	display: table-header-group;
 }
+
+.divTableHead {
+	text-align: center;
+	vertical-align: middle;
+}
+
 .divTableCell, .divTableHead {
 	border: 1px solid #999999;
 	display: table-cell;
@@ -26,4 +32,12 @@
 }
 .divTableBody {
 	display: table-row-group;
+}
+
+.innerTable {
+	table-layout: fixed;
+}
+
+.innerTableBody {
+	background-color: white;
 }

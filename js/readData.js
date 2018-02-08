@@ -9,6 +9,24 @@ function llenaCampos(arr) {
     document.getElementById("telefono").innerHTML = arr['Teléfono Acudiente'];
     document.getElementById("edad").innerHTML = arr['Edad'];
     document.getElementById("convenio").innerHTML = arr['Convenio INPEC'];
+    document.getElementById("riesgoFSD").innerHTML = riesgoFSD(arr);
+    console.log(arr);
+}
+
+// Analisis de los riesgos
+function riesgoFSD(arr) {
+    if(arr['Area Residencia'] == 'Rural' || arr['Estado Civil'] == 'Madre Soltera' ||
+        arr['Disc. Auditiva'] != 'No Aplica' || arr['Disc. Auditiva'] != '#N/A' ||
+        arr['Disc. Cognitiva'] != 'No Aplica' || arr['Disc. Cognitiva'] != '#N/A' ||
+        arr['Disc. Emocional'] != 'No Aplica' || arr['Disc. Emocional'] != '#N/A' ||
+        arr['Disc. Fisica'] != 'No Aplica' || arr['Disc. Fisica'] != '#N/A' ||
+        arr['Disc. Mental'] != 'No Aplica' || arr['Disc. Mental'] != '#N/A' ||
+        arr['Disc. Visual'] != 'No Aplica' || arr['Disc. Visual'] != '#N/A' ||
+        arr['Convenio INPEC'] == 'Interno') {
+        return "Riesgo por condiciones personales";
+    } else {
+        return "Sin riesgo por condiciones personales";
+    }
 }
 
 function consultaDocumento() {
