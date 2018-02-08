@@ -1,14 +1,14 @@
 function llenaCampos(arr) {
-    document.getElementById("identificacion").innerHTML = arr[1];
-    document.getElementById("nombre").innerHTML = arr[2] + ' ' + arr[3] + ' ' + arr[4];
-    document.getElementById("centro").innerHTML = arr[6];
-    document.getElementById("zona").innerHTML = arr[7];
-    document.getElementById("programa").innerHTML = arr[5];
-    document.getElementById("escuela").innerHTML = arr[8];
-    document.getElementById("email").innerHTML = arr[9];
-    document.getElementById("telefono").innerHTML = arr[35];
-    document.getElementById("edad").innerHTML = arr[30];
-    document.getElementById("convenio").innerHTML = arr[24];
+    document.getElementById("identificacion").innerHTML = arr['Documento'];
+    document.getElementById("nombre").innerHTML = arr['Nombres'] + ' ' + arr['Primer Apellido'] + ' ' + arr['Segundo Apellido'];
+    document.getElementById("centro").innerHTML = arr['Cead'];
+    document.getElementById("zona").innerHTML = arr['Zona'];
+    document.getElementById("programa").innerHTML = arr['Programa'];
+    document.getElementById("escuela").innerHTML = arr['Escuela'];
+    document.getElementById("email").innerHTML = arr['Email'];
+    document.getElementById("telefono").innerHTML = arr['Teléfono Acudiente'];
+    document.getElementById("edad").innerHTML = arr['Edad'];
+    document.getElementById("convenio").innerHTML = arr['Convenio INPEC'];
 }
 
 function consultaDocumento() {
