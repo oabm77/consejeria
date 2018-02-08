@@ -2,7 +2,12 @@
 <html>
 <head>
 	<title>Caracterizacion</title>
-	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
 	<script type="text/javascript" src="js/readData.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/readData.css">
 </head>
@@ -13,7 +18,7 @@
 			<input type="text" name="Documento" id="Documento">
 		</p>
 		<div class="divTable">
-			<div class="divTableBody">
+			<div class="divTableHeading">
 				<!-- <div class="divTableRow">
 					<div class="divTableCell">&nbsp;</div>
 					<div class="divTableCell">&nbsp;</div>
@@ -40,6 +45,8 @@
 					<div class="divTableCell">ASIGNACION</div>
 					<div class="divTableCell">CONVENIO</div>
 				</div>
+			</div>
+			<div class="divTableBody">
 				<div class="divTableRow">
 					<div class="divTableCell" id="identificacion">&nbsp;</div>
 					<div class="divTableCell" id="nombre">&nbsp;</div>
