@@ -1,3 +1,13 @@
+var msgFSD, msgFSE;
+$(document).ready(function(){
+    $('#riesgoFSD').click(function(){
+        $.alert(msgFSD);
+    });    
+    $('#riesgoFSE').click(function(){
+        $.alert(msgFSE);
+    });    
+});
+
 function llenaCampos(arr) {
     document.getElementById("identificacion").innerHTML = arr['Documento'];
     document.getElementById("nombre").innerHTML = arr['Nombres'] + ' ' + arr['Primer Apellido'] + ' ' + arr['Segundo Apellido'];
@@ -10,23 +20,40 @@ function llenaCampos(arr) {
     document.getElementById("edad").innerHTML = arr['Edad'];
     document.getElementById("convenio").innerHTML = arr['Convenio INPEC'];
     document.getElementById("riesgoFSD").innerHTML = riesgoFSD(arr);
-    console.log(arr);
+    document.getElementById("riesgoFSE").innerHTML = riesgoFSE(arr);
 }
 
 // Analisis de los riesgos
 function riesgoFSD(arr) {
-    if(arr['Area Residencia'] == 'Rural' || arr['Estado Civil'] == 'Madre Soltera' ||
-        arr['Disc. Auditiva'] != 'No Aplica' || arr['Disc. Auditiva'] != '#N/A' ||
-        arr['Disc. Cognitiva'] != 'No Aplica' || arr['Disc. Cognitiva'] != '#N/A' ||
-        arr['Disc. Emocional'] != 'No Aplica' || arr['Disc. Emocional'] != '#N/A' ||
-        arr['Disc. Fisica'] != 'No Aplica' || arr['Disc. Fisica'] != '#N/A' ||
-        arr['Disc. Mental'] != 'No Aplica' || arr['Disc. Mental'] != '#N/A' ||
-        arr['Disc. Visual'] != 'No Aplica' || arr['Disc. Visual'] != '#N/A' ||
-        arr['Convenio INPEC'] == 'Interno') {
-        return "Riesgo por condiciones personales";
-    } else {
-        return "Sin riesgo por condiciones personales";
-    }
+    var na = ['No Aplica', '#N/A'];
+
+    var riesgos = new Array;
+    riesgos.push(arr['Area Residencia'] == 'Rural'?'Rural':null);
+    riesgos.push(arr['Estado Civil'] == 'Madre Soltera'?'Madre Soltera':null);
+    riesgos.push(na.indexOf(arr['Disc. Auditiva']) < 0?arr['Disc. Auditiva']:null);
+    riesgos.push(na.indexOf(arr['Disc. Cognitiva']) < 0?arr['Disc. Cognitiva']:null);
+    riesgos.push(na.indexOf(arr['Disc. Emocional']) < 0?arr['Disc. Emocional']:null);
+    riesgos.push(na.indexOf(arr['Disc. Fisica']) < 0?arr['Disc. Fisica']:null);
+    riesgos.push(na.indexOf(arr['Disc. Mental']) < 0?arr['Disc. Mental']:null);
+    riesgos.push(na.indexOf(arr['Disc. Visual']) < 0?arr['Disc. Visual']:null);
+    riesgos.push(arr['Convenio INPEC'] == 'Interno'?'Interno':null);
+    msgFSD = '';
+    riesgos.forEach(function(e){
+        msgFSD += (e!=null?e+'\n':'');
+    });
+    
+    return msgFSD.length > 0?"Riesgo por condiciones personales":"Sin riesgo por condiciones personales";
+}
+
+function riesgoFSE(arr) {
+    var riesgos = new Array;
+    riesgos.push(arr['Ingresos Mensuales'] == 'Menos de un salario mínimo'?'Menos de un salario mínimo':null);
+    riesgos.push(arr['Situación Laboral'] == 'Desempleado'?'Desempleado':null);
+    msgFSE = '';
+    riesgos.forEach(function(e){
+        msgFSE += (e!=null?e+'\n':'');
+    });
+    return msgFSE.length > 0?"Riesgo socioeconomico":"Sin riesgo socioeconomico";
 }
 
 function consultaDocumento() {
